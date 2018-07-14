@@ -317,13 +317,14 @@ class EntityWriter<E extends S, S> implements ParameterBinder<E> {
         throws SQLException {
 
         Object generatedKey;
-        String column = key.getName();
+        //String column = key.getName();
         int resultIndex = 1;
+        /*
         try {
             // try find column if driver supports it
             resultIndex = results.findColumn(column);
         } catch (SQLException ignored) {
-        }
+        }*/
         if (key.getPrimitiveKind() != null) {
             switch (key.getPrimitiveKind()) {
                 case INT:
